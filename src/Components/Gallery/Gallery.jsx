@@ -1,9 +1,11 @@
+// REACT
 import React, { useState } from 'react';
+// CSS
 import "../Gallery/gallery.css";
 
 const Gallery = (props) => {
-  const pictures =props.pictures;
-  const [ currentPicture, setCurrentPicture ] = useState(0);
+  const pictures = props.pictures;
+  const [currentPicture, setCurrentPicture] = useState(0);
   const getClassName = (index) => {
     if (index === currentPicture) return "show";
     return "";
@@ -32,36 +34,31 @@ const Gallery = (props) => {
   const getCarousel = () => {
     return pictures.map((pic, index) => (
       <img key={pic} src={pic} alt="" className={getClassName(index)}></img>
-      ));
+    ));
   };
-
 
   return (
     <div className='image__banner_img'>
       <div className="image__container">
         {getCarousel()}
       </div>
-          {isPicturesAvailable() && 
-          <>
-           {props.numberPhotos > 1 ? <button id='button' className='btn btn-previous' onClick={moveToPrevious}>
-              <i className='fas fa-chevron-left'></i>
-            
-              </button> : <span></span>
-              }
+      {isPicturesAvailable() &&
+        <>
+          {props.numberPhotos > 1 ? <button id='button' className='btn btn-previous' onClick={moveToPrevious}>
+            <i className='fas fa-chevron-left'></i>
 
-            {props.numberPhotos > 1 ? <span className='slide__counter'>
-              {currentPicture + 1} / {pictures.length}
-            </span> : <span></span>}
-
-            {props.numberPhotos > 1 ? <button className='btn btn-next' onClick={moveToNext}>
-              <i className='fas fa-chevron-right'></i>
-            </button> : <span></span>}
-          </>
+          </button> : <span></span>
           }
+          {props.numberPhotos > 1 ? <span className='slide__counter'>
+            {currentPicture + 1} / {pictures.length}
+          </span> : <span></span>}
+          {props.numberPhotos > 1 ? <button className='btn btn-next' onClick={moveToNext}>
+            <i className='fas fa-chevron-right'></i>
+          </button> : <span></span>}
+        </>
+      }
     </div>
   )
 }
-
- 
 export default Gallery;
 

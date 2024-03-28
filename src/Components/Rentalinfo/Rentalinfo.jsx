@@ -1,3 +1,4 @@
+// CSS
 import "../Rentalinfo/rentalinfo.css"
 
 const Rentalinfo = ({ Apartment }) => {

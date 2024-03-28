@@ -5,16 +5,16 @@
 }
 
 .collapse_content {
-  
-    padding:1.25rem;
+
+    padding: 1.25rem;
     background-color: #F7F7F7;
     border-radius: 0.3rem;
     position: relative;
     bottom: 0.3rem;
     height: 100%;
     font-weight: normal;
-    font-size:1.12rem;
-   
+    font-size: 1.12rem;
+
 }
 
 .collapse_bar {
@@ -39,60 +39,13 @@
 }
 
 /* Animations */
-.collapse[animation="1"] > .collapse_content {
-    animation: open 300ms;
-}
-
-.collapse[animation="0"] > .collapse_content {
-    animation: close 300ms ease-in-out;
-}
-
-.arrow[animation="0"] {
-    transform: rotate(360deg);
-    transition: transform 300ms;
-    cursor: pointer;
-}
-
-
-.arrow[animation="1"] {
-    transform: rotate(180deg);
-    transition: transform 300ms;
-   cursor: pointer;
-}
-
-@media (max-width: 580px) {
-    .collapse {
-        width: 100%;
-        margin-bottom: 1.25rem;
-    }
-    
-    .collapse_bar {
-        padding-left: 0.8rem;
-        padding-right: 0.8rem;
-        height: 1.8rem;
-    }
-    
-    .arrow{
-        height: 1.25rem;
-        
-    }
-
-    .title {
-        font-weight: 500;
-        font-size: 1rem;
-    }
-    
-    .collapse_content {
-        padding: 1.25rem 1.25rem 0.6rem 1.25rem;
-    }
-}
-
 @keyframes open {
     0% {
         opacity: 0;
         max-height: 0;
         transform: translateY(-70px);
     }
+
     100% {
         opacity: 1;
         max-height: 400px;
@@ -106,6 +59,7 @@
         max-height: 400px;
         transform: translateY(0);
     }
+
     100% {
         opacity: 0;
         max-height: 0;
@@ -113,8 +67,51 @@
     }
 }
 
+.collapse[animation="1"]>.collapse_content {
+    animation: open 300ms;
+}
+
+.collapse[animation="0"]>.collapse_content {
+    animation: close 300ms ease-in-out;
+}
+
+.arrow[animation="0"] {
+    transform: rotate(360deg);
+    transition: transform 300ms;
+    cursor: pointer;
+}
 
 
+.arrow[animation="1"] {
+    transform: rotate(180deg);
+    transition: transform 300ms;
+    cursor: pointer;
+}
 
+/* MOBILE */
+@media (max-width: 580px) {
+    .collapse {
+        width: 100%;
+        margin-bottom: 1.25rem;
+    }
 
+    .collapse_bar {
+        padding-left: 0.8rem;
+        padding-right: 0.8rem;
+        height: 1.8rem;
+    }
 
+    .arrow {
+        height: 1.25rem;
+
+    }
+
+    .title {
+        font-weight: 500;
+        font-size: 1rem;
+    }
+
+    .collapse_content {
+        padding: 1.25rem 1.25rem 0.6rem 1.25rem;
+    }
+}

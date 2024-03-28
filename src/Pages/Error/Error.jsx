@@ -1,3 +1,4 @@
+// COMPONENTS
 import Error from "../../Components/Error/Error";
 
 const Errorpage = () => {

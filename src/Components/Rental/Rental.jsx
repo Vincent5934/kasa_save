@@ -1,25 +1,26 @@
-
-import rentalData from "../../data/data.json"
+// COMPONENTS
 import Cards from "../Cards/Cards";
+// DATAS
+import rentalData from "../../data/data.json"
+// CSS
 import "../Rental/rental.css"
 
 
 const Rental = () => {
-
-    return ( 
+    return (
         <section className="rental">
             {rentalData.map(data => {
-                return(
+                return (
                     <Cards
-                    key={data.id}
-                    id={data.id}
-                    title={data.title}
-                    cover={data.cover}
+                        key={data.id}
+                        id={data.id}
+                        title={data.title}
+                        cover={data.cover}
                     />
                 )
             })}
 
         </section>
-     );
+    );
 }
 export default Rental;

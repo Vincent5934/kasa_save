@@ -7,7 +7,7 @@
     height: 415px;
     width: 100%;
     position: relative;
-    
+
 }
 
 .image__banner_img img {
@@ -46,13 +46,6 @@
 .btn-previous {
     left: 0;
 }
-/* .btn-next:active, .btn-next:focus {
-    outline: none;
-} */
-
-/* .btn-previous:active, .btn-previous:focus {
-    outline: none;
-} */
 
 .slide__counter {
     position: absolute;
@@ -63,11 +56,12 @@
 }
 
 /* Mobile */
-@media only screen and (width <= 768px) {
+@media only screen and (width <=768px) {
     .image__container {
-          height: 285px;
+        height: 285px;
     }
-    .image__container > img {
-          height: 300px;
+
+    .image__container>img {
+        height: 300px;
     }
-} 
+}

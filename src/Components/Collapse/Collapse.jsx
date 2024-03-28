@@ -1,24 +1,27 @@
-import "../Collapse/collapse.css"
+// REACT
 import { useState } from "react"
+// CSS
+import "../Collapse/collapse.css"
+// ASSETS
 import arrow from "../../Assets/arrow.png"
 
-function Collapse({ title, content }) {
+const Collapse = ({ title, content }) => {
     const [isOpen, setIsOpen] = useState(false)
     const [animation, setAnimation] = useState(0)
 
     function close() {
         setAnimation(0);
-        setTimeout(() => {setIsOpen(false)}, 300);
+        setTimeout(() => { setIsOpen(false) }, 300);
     }
 
     function open() {
         setIsOpen(true);
         setAnimation(1);
     }
- 
+
     return isOpen ? (
         <div className="collapse" animation={animation} >
-            <button  className="collapse_bar" >
+            <button className="collapse_bar" >
                 <div className="title">{title}</div>
                 <img src={arrow} alt="" className="arrow" animation={animation} onClick={() => close()} />
             </button>
@@ -26,12 +29,11 @@ function Collapse({ title, content }) {
         </div>
     ) : (
         <div className="collapse" >
-            <button  className="collapse_bar" >
+            <button className="collapse_bar" >
                 <div className="title">{title}</div>
                 <img src={arrow} alt="" className="arrow" animation={animation} onClick={() => open()} />
-                </button>
+            </button>
         </div>
     )
 }
-
-export default Collapse
+export default Collapse;

@@ -1,22 +1,19 @@
+// REACT
 import { Link } from "react-router-dom";
-import Navbar from "../../Components/Navbar/Navbar";
-import Footer from "../../Components/Footer/Footer";
+// ASSETS
 import ErrorTitle from "../../Assets/404.jpg"
+// CSS
 import "../Error/error.css"
 
 const Error = () => {
     return (
-        <>
-            <div className="navbar_error">
-                <Navbar />
-            </div>
+        <div className="navbar_error">
             <div className="error_page">
                 <img src={ErrorTitle} alt="erreur 404" className="error_title" />
                 <p className="error_text">Oups! La page que vous demandez n'existe pas.</p>
                 <Link to="/">Retourner sur la page d'accueil</Link>
             </div>
-            <Footer />
-        </>
+        </div>
     );
 }
 export default Error;
