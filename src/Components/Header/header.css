@@ -1,0 +1,45 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header_image {
+    width: 100%;
+    object-fit: cover;
+    height: 223px;
+    border-radius: 20px;
+    filter: brightness(50%);
+
+}
+
+.header_text {
+    position: absolute;
+    color: white;
+    font-size: 3rem;
+    font-weight: bold;
+    font-family: "montserrat";
+}
+
+/* Mobile */
+@media only screen and (width <=768px) {
+    .header {
+        width: 100%;
+    }
+
+    .header_text {
+        font-size: 2rem;
+
+    }
+}
+
+@media only screen and (width <=425px) {
+    .header {
+        width: 100%;
+
+    }
+
+    .header_text {
+        font-size: 1rem;
+    }
+}

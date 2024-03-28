@@ -1,0 +1,49 @@
+.navbar_error{
+    margin-left: 3rem;
+    margin-right: 3rem;
+}
+
+.error_page {
+    color: #ff6060;
+    text-align: center;
+    min-height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:6rem;
+}
+.error_title{
+    width:597px;
+    height:263px;
+}
+
+p {
+    color: #ff6060;
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.error_page a {
+    text-decoration: underline;
+
+}
+
+/* Mobile */
+@media only screen and (width <= 768px) {
+    p {
+          font-size: 1.5rem;
+          font-weight: 500;
+    }
+    .error_title{
+        width:398px;
+        height: auto;
+    }
+}
+
+@media only screen and (width <= 425px) {
+    .error_title{
+        width:238px;
+        height: auto;
+    }
+}

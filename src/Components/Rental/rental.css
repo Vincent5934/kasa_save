@@ -1,0 +1,37 @@
+.rental {
+    background: #F7F7F7;
+    min-height: 50vh;
+    border-radius: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    padding: 2.5rem;
+    margin-top: 50px;
+}
+
+.rental>a {
+    width: 30%;
+}
+
+/* Mobile */
+@media only screen and (width <=768px) {
+    .rental {
+        display: flex;
+        justify-content: center;
+        background: none;
+        padding: 0;
+        border-radius: 1.5rem;
+        gap: 1.5rem;
+    }
+
+    .rental>a {
+        width: 100%;
+    }
+}
+
+@media only screen and (width <=480px) {
+    .card__image {
+        height: 250px;
+    }
+}
