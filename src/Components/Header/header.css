@@ -7,8 +7,8 @@
 .header_image {
     width: 100%;
     object-fit: cover;
-    height: 223px;
-    border-radius: 20px;
+    height: 14rem;
+    border-radius: 1.25rem;
     filter: brightness(50%);
 
 }
@@ -22,21 +22,26 @@
 }
 
 /* Mobile */
-@media only screen and (width <=768px) {
-    .header {
-        width: 100%;
-    }
-
+@media only screen and (width <=1024px) {
     .header_text {
-        font-size: 2rem;
-
+        font-size: 2.5rem;
     }
 }
 
-@media only screen and (width <=425px) {
-    .header {
-        width: 100%;
 
+@media only screen and (width <=768px) {
+    .header_image{
+        height:10.5rem;
+    }
+
+    .header_text {
+        font-size: 1.5rem;
+    }
+}
+
+@media only screen and (width <=500px) {
+    .header_image{
+        height:7rem;
     }
 
     .header_text {

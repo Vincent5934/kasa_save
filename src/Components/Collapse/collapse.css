@@ -1,16 +1,20 @@
 .collapse {
     width: 100%;
-    margin-bottom: 30px;
+    margin-bottom: 2rem;
     overflow: hidden;
 }
 
 .collapse_content {
-    padding: 35px 30px 17px 30px;
+  
+    padding:1.25rem;
     background-color: #F7F7F7;
-    border-radius: 5px;
+    border-radius: 0.3rem;
     position: relative;
-    bottom: 5px;
+    bottom: 0.3rem;
     height: 100%;
+    font-weight: normal;
+    font-size:1.12rem;
+   
 }
 
 .collapse_bar {
@@ -18,20 +22,20 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 1rem;
+    padding-right: 1rem;
     background-color: #FF6060;
     border: none;
     color: white;
     border-radius: 5px;
-    height: 50px;
+    height: 3.1rem;
     position: relative;
     z-index: 10;
 }
 
 .title {
-    font-weight: 500;
-    font-size: 1.3em;
+    font-weight: bold;
+    font-size: 1.5rem;
 }
 
 /* Animations */
@@ -56,25 +60,30 @@
    cursor: pointer;
 }
 
-@media (max-width: 576px) {
+@media (max-width: 580px) {
     .collapse {
         width: 100%;
-        margin-bottom: 20px;
+        margin-bottom: 1.25rem;
     }
     
     .collapse_bar {
-        padding-left: 20px;
-        padding-right: 20px;
-        height: 30px;
+        padding-left: 0.8rem;
+        padding-right: 0.8rem;
+        height: 1.8rem;
     }
     
+    .arrow{
+        height: 1.25rem;
+        
+    }
+
     .title {
         font-weight: 500;
-        font-size: 1.1em;
+        font-size: 1rem;
     }
     
     .collapse_content {
-        padding: 25px 20px 10px 20px;
+        padding: 1.25rem 1.25rem 0.6rem 1.25rem;
     }
 }
 
