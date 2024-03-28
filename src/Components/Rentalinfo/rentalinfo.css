@@ -58,6 +58,7 @@ h3 {
 .apartment_tags {
     display: flex;
     gap: 0.5rem;
+    margin-bottom: 0.3rem;
 }
 
 .apartment_tags div {

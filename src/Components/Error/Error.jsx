@@ -12,7 +12,7 @@ const Error = () => {
             </div>
             <div className="error_page">
                 <img src={ErrorTitle} alt="erreur 404" className="error_title" />
-                <p>Oups! La page que vous demandez n'existe pas.</p>
+                <p className="error_text">Oups! La page que vous demandez n'existe pas.</p>
                 <Link to="/">Retourner sur la page d'accueil</Link>
             </div>
             <Footer />
