@@ -1,10 +1,9 @@
 // REACT
-import React, { useState } from 'react';
+import { useState } from 'react';
 // CSS
 import "../Gallery/gallery.css";
 
-const Gallery = (props) => {
-  const pictures = props.pictures;
+const Gallery = ({pictures, numberPhotos}) => {
   const [currentPicture, setCurrentPicture] = useState(0);
   const getClassName = (index) => {
     if (index === currentPicture) return "show";
@@ -32,8 +31,8 @@ const Gallery = (props) => {
 
   // Carousel ou image par défaut
   const getCarousel = () => {
-    return pictures.map((pic, index) => (
-      <img key={pic} src={pic} alt="" className={getClassName(index)}></img>
+    return pictures.map((pic, index, description) => (
+      <img key={pic} src={pic} alt={description} className={getClassName(index)} />
     ));
   };
 
@@ -44,15 +43,15 @@ const Gallery = (props) => {
       </div>
       {isPicturesAvailable() &&
         <>
-          {props.numberPhotos > 1 ? <button id='button' className='btn btn-previous' onClick={moveToPrevious}>
+          {numberPhotos > 1 ? <button id='button' className='btn btn-previous' onClick={moveToPrevious}>
             <i className='fas fa-chevron-left'></i>
 
           </button> : <span></span>
           }
-          {props.numberPhotos > 1 ? <span className='slide__counter'>
+          {numberPhotos > 1 ? <span className='slide__counter'>
             {currentPicture + 1} / {pictures.length}
           </span> : <span></span>}
-          {props.numberPhotos > 1 ? <button className='btn btn-next' onClick={moveToNext}>
+          {numberPhotos > 1 ? <button className='btn btn-next' onClick={moveToNext}>
             <i className='fas fa-chevron-right'></i>
           </button> : <span></span>}
         </>
